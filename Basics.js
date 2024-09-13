@@ -332,6 +332,90 @@ while (num12 !==0){
 }
 console.log(`reverse number is ${m} ` );
 
+//objet- Is a real world entity, that has properties.
 
+let tech1 = 'tech';
+let asd = {
+    name : 'Siva',
+    tech : 'Fullstack',
+    Exp : '4years'
+ };
 
-   
+console.log(asd, typeof asd); //print the total object
+console.log(asd.name); //print the only name property, by using object_name.property_name
+console.log(asd[tech1]); //print the tech, created new variable and store the tech to new variable, object_name[new_variable_name]
+
+//complex object- object has a inside another object is called complex object
+let obj = {
+    name : 'siva',
+    age :21,
+    address :{
+        House_No :'4-412',
+        village : 'Malikipuram',
+        Mandal : 'Sakhenetipalli',
+        District : 'East Godavari',
+        state : 'Andhra Pradesh',
+    }
+}
+delete obj.age; //delete the age property.
+
+console.log(obj); //print the complete complex object
+console.log(obj.address); //print the inside the object
+console.log(obj.name,obj.name.length);//print the property value and length 
+console.log(obj.address.village.length);//print the inside the object property length
+
+console.log(obj.address.village1?.length) //if not available for property name then used for last of the nmae in ?
+console.log(obj.address?.village); 
+console.log(obj.address1?.village);
+
+//for - in loop for print teh all the properties inthat complex object
+for (let key in obj){
+    console.log(key,obj[key]);
+    
+}
+//write a code to print all the properties in laptop
+for(let key in obj.address){
+    console.log(key, obj.address[key]);
+    
+}
+
+//function-It is a group of code. it is used for code reuse purpose.
+//If you have to create function mean 2 things you do.1.Defining the function 2.calling the function
+//1.defining the function
+function greeting(){
+    console.log("Good Morninng Guys");
+    
+}
+//2.calling the function
+greeting();
+
+//create a function for "hello guys" by using return statement
+function greet() {
+    return "Hello guys"
+    
+}
+let str = greet();
+console.log(str);
+
+//create a in hello name_of_candidate, passing the parameters
+function nam(name123){
+    return `Hello ${name123}`
+}
+// let name123 = 'Siva'
+console.log(nam('sai'));
+
+//create a function for addition
+function add(number1,number2) {
+    let addition = number1 +number2;
+    return `Addition of ${number1} and ${number2} is ${addition}`
+}
+console.log(add(8,9));
+
+//function expression
+let sub12 = function (num1,num2){
+    return num1 -num2
+}
+let sub123= sub12;
+console.log(sub12(9,5));
+console.log(sub123);
+
