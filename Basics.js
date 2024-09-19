@@ -262,7 +262,7 @@ let res = numbe1 + numbe2;
 console.log("The addition of "+ numbe1 +" and "+ numbe2 +" is "+ res);//older way
 console.log(`The addition of ${numbe1} and ${numbe2} is ${res}`);//by using template literal
 
-console.log("I am \nSiva Sai Kuam");//using \n for new line
+console.log("I am \nSiva Sai Kumar");//using \n for new line
 console.log(`I am
 Siva Sai Kumar`);//using template literal
 
@@ -418,4 +418,140 @@ let sub12 = function (num1,num2){
 let sub123= sub12;
 console.log(sub12(9,5));
 console.log(sub123);
+
+//FUNCTION EXPRESSION
+let Mult = function(num1,num2){
+    return num1*num2;
+}
+console.log(Mult(10,5));
+
+//global variable - variable that can be created outside the function is called global variable
+//local variable - The variable that can be created inside  the function is called local variable.
+
+function adds(num1,num2,num3=6){ //num3 value is assigned to default cases.
+    let asdf = 16; //local variable
+    console.log(asdf);
+    return num1+num2+num3;
+}
+let result123 = adds(5,6); //global variable
+console.log(result123);
+
+//Arrow function
+let func =(num1,num2) => num1+num2;
+
+let result1234 = func(5,6)
+console.log(result1234);
+
+//even number through arrow function
+let eve = (num1)=> {
+    if (num1%2===0) {
+        console.log("Even");
+        
+    }
+    else{
+        console.log("Odd");
+        
+    }
+} ;
+eve(10);
+
+//Method - The function can be created in side the object is called method.
+let computer={
+    core : 'i5',
+    ram : '8gb',
+    ssd: '512gb',
+    cost : 52000,
+    greet :() => console.log("Hello, good morning!"),
+        
+    
+}
+computer.greet();
+//using this keyword
+let laptop = {
+    ram :'4gb',
+    storage :'2tb',
+    cpu : 'i9',
+    gre: function(){
+        console.log(this.cpu)
+        console.log(this .ram);
+        
+    }
+}
+laptop.gre()
+
+//what the reason using the this keyword
+// function whichisbest(laptop1, laptop2){
+//     if(laptop1.cpu > laptop2.cpu)
+//         console.log(laptop1);
+//     else
+//         console.log(laptop2);
+           
+// }
+
+
+let laptop1 = {
+    ram :'4gb',
+    cpu :'i9',
+    storage : '512gb',
+    compare : function(other){
+        if(this.cpu > other.cpu)
+            console.log(this);
+        else
+            console.log(other);
+            
+            
+    },
+    greet: function(){
+        console.log(this.cpu);
+        
+    }
+    
+}
+let laptop2= {
+    ram : '8gb',
+    cpu : 'i7',
+    storage : '512gb',
+    greet: function(){
+        console.log(this.cpu);
+        
+    }
+}
+
+// whichisbest(laptop1,laptop2);
+laptop1.compare(laptop2);
+
+//create a constructor
+//construtor is knothing but create  a obj i different way
+
+function Siva(name,age){
+    this.name = name;
+    this.age = age;
+    this.dfg = function(){
+        console.log("Hello Guys");
+        
+    }
+}
+
+let allien = new Siva('Naveen',45);
+let allien1 = new Siva('Manoj',15);
+allien1.name = 'Sunil';
+console.log(allien1);
+
+console.log(allien);
+allien.dfg();
+
+//array - The collection of data in similar datatype is called array.
+//creation of array - 2 types
+//1.let arr = new Array();
+//2.let arr = [];
+
+let arr = [5,6,7];
+//adding the elements in array name arr
+arr.push(10,20);
+//print the total array
+console.log(arr);
+//fetching the 3nd value from left
+console.log(arr[2]);
+//fetching the 1st value from the left
+console.log(arr[0]);
 
